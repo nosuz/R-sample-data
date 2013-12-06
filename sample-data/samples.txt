@@ -4,4 +4,8 @@ HTTP response time. Making new connection for each request.
 keep-alive.data
 HTTP response time. Using created connection for requests.
 
+single-joe.data
+HTTP response time on joe. Make new connection for each request.
 
+keepalive-joe.data
+HTTP response time on joe. Use Keep-alive connection
