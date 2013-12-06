@@ -1,0 +1,7 @@
+single-connection.data
+HTTP response time. Making new connection for each request.
+
+keep-alive.data
+HTTP response time. Using created connection for requests.
+
+
