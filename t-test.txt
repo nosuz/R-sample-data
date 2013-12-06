@@ -1,0 +1,25 @@
+# Do two sample t-test
+
+# load sample collection(vector)
+single<-scan("sample-data/single-connection.data")
+keep <- scan("sample-data/keep-alive.data")
+
+# check mac value
+max(single)
+max(keep)
+
+# make histgram
+# draw data that have bigger count column
+hist(keep, breaks=seq(0,2.2, 0.1), right=F, col = "#ff00ff40", border = "#ff00ff")
+hist(single, breaks=seq(0,2.2, 0.1), right=F, add=T, col = "#0000ff40", border = "#0000ff")
+
+# test normality
+shapiro.test(single)
+shapiro.test(keep)
+
+# t test
+t.test(keep, single) # Welch Two Sample t-test
+t.test(keep, single, var.equal=T) # Two Sample t-test, when nomality test passed
+
+# exit
+q() # or Ctrl-d
